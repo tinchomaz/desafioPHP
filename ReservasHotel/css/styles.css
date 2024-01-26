@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@600;700&display=swap');
+body{
+    margin: 0;
+}
+.header img{
+    width: 100vw;
+}
+.hotel-card{
+    font-family: 'Familjen Grotesk', sans-serif;
+    font-weight: 700;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+.hotel-card button{
+    font-family: 'Familjen Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1.5vw;
+    margin: 2%;
+    color: orange;
+    border-left: 0.08em solid;
+    position: relative;
+    margin-top: 0.8em;
+    cursor: pointer;
+}
+.hotel-card button::before,
+.hotel-card button::after
+ {
+    content: '';
+    position: absolute;
+    width: inherit;
+    border-left: inherit;
+    z-index: -1;
+}
+.hotel-card button::before {
+    height: 80%;
+    top: 10%;
+    left: calc(-0.15em - 0.08em * 2);
+    filter: brightness(0.8);
+}
+.hotel-card button::after {
+    height: 60%;
+    top: 20%;
+    left: calc(-0.15em * 2 - 0.08em * 3);
+    filter: brightness(0.6);
+}
+.hotel-card button {
+    position: relative;
+    height: 120%;
+    top: -10%;
+    box-sizing: border-box;
+    border: 0.08em solid;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    transform: translateX(calc(-0.15em * 3 - 0.08em * 2));
+    transition: 0.3s;
+}
+.hotel-card button:hover{
+    transform: translateX(0.15em);
+}
+.info-div {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.habitacion-btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    background-color: #ddd;
+    cursor: pointer;
+}
+.habitacion-info {
+    display: none;
+    position: absolute;
+    width: 50vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.habitacion-btn.seleccionada {
+    background-color: #1405eb;
+    color: #ffffff;
+}

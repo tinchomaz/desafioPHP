@@ -1,0 +1,19 @@
+1-Manejo de Datos en Tránsito y Persistencia: Explica cómo manejarías la seguridad de los 
+datos en tránsito (durante la comunicación entre el cliente y el servidor) y la persistencia de 
+datos (almacenamiento a largo plazo) en el sistema de reservas. ¿Qué tecnologías y prácticas 
+considerarías?
+
+Para manejar la seguridad de los datos usaria HTTPS,para evitar ataques de agentes externos.
+Cifraria los datos que recibe o envia el servidor al cliente
+Para la persistencia de datos usaria consultas SQL preparadas para evitar inyecciones SQL.
+
+
+
+2- Seguridad en la Reserva de Habitaciones: ¿Qué medidas de seguridad implementarías para 
+prevenir problemas como la reserva de una habitación que ya está ocupada? Considera la 
+concurrencia y cómo manejarías situaciones en las que varios clientes intentan reservar la 
+misma habitación simultáneamente.
+
+
+Antes de confirmar la reserva, realizaría una verificación de disponibilidad mediante consultas SQL 
+que seleccionen habitaciones disponibles en el rango de fechas deseado.(el codigo actual lo hace pero lo haria mas dinamico)
